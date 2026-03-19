@@ -62,29 +62,30 @@ def filter_category():
     print()
 
 
-while True:
-    print("===== TO-DO LIST MANAGER =====")
-    print("1. Add Task")
-    print("2. View Tasks")
-    print("3. Mark Task as Completed")
-    print("4. Delete Task")
-    print("5. Filter by Category")
-    print("6. Exit")
+if __name__ == "__main__":
+    while True:
+        print("===== TO-DO LIST MANAGER =====")
+        print("1. Add Task")
+        print("2. View Tasks")
+        print("3. Mark Task as Completed")
+        print("4. Delete Task")
+        print("5. Filter by Category")
+        print("6. Exit")
 
-    choice = input("Enter your choice: ")
+        choice = input("Enter your choice: ")
 
-    if choice == "1":
-        add_task()
-    elif choice == "2":
-        view_tasks()
-    elif choice == "3":
-        mark_completed()
-    elif choice == "4":
-        delete_task()
-    elif choice == "5":
-        filter_category()
-    elif choice == "6":
-        print("Exiting program...")
-        break
-    else:
-        print("Invalid choice. Try again.\n")
+        if choice == "1":
+            add_task()
+        elif choice == "2":
+            view_tasks()
+        elif choice == "3":
+            mark_completed()
+        elif choice == "4":
+            delete_task()
+        elif choice == "5":
+            filter_category()
+        elif choice == "6":
+            print("Exiting program...")
+            break
+        else:
+            print("Invalid choice. Try again.\n")

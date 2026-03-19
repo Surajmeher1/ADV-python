@@ -43,26 +43,27 @@ def show_vehicles():
             print("Vehicle:", v)
 
 
-while True:
-    print("\n===== Parking Lot Management =====")
-    print("1. Vehicle Entry")
-    print("2. Vehicle Exit")
-    print("3. Show Parked Vehicles")
-    print("4. Available Spots")
-    print("5. Exit")
+if __name__ == "__main__":
+    while True:
+        print("\n===== Parking Lot Management =====")
+        print("1. Vehicle Entry")
+        print("2. Vehicle Exit")
+        print("3. Show Parked Vehicles")
+        print("4. Available Spots")
+        print("5. Exit")
 
-    choice = input("Enter choice: ")
+        choice = input("Enter choice: ")
 
-    if choice == "1":
-        vehicle_entry()
-    elif choice == "2":
-        vehicle_exit()
-    elif choice == "3":
-        show_vehicles()
-    elif choice == "4":
-        available_spots()
-    elif choice == "5":
-        print("Program closed")
-        break
-    else:
-        print("Invalid choice")
+        if choice == "1":
+            vehicle_entry()
+        elif choice == "2":
+            vehicle_exit()
+        elif choice == "3":
+            show_vehicles()
+        elif choice == "4":
+            available_spots()
+        elif choice == "5":
+            print("Program closed")
+            break
+        else:
+            print("Invalid choice")

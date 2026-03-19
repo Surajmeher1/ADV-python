@@ -8,12 +8,17 @@ root.title("Sign In")
 root.geometry("900x550")
 root.configure(bg="black")
 
-logo_img = Image.open("logo.png")
-logo_img = logo_img.resize((120,120))
-logo = ImageTk.PhotoImage(logo_img)
+try:
+    logo_img = Image.open("logo.png")
+    logo_img = logo_img.resize((120,120))
+    logo = ImageTk.PhotoImage(logo_img)
+except FileNotFoundError:
+    print("Warning: logo.png not found. Running without logo.")
+    logo = None
 
-logo_label = Label(root, image=logo, bg="black")
-logo_label.pack(pady=20)
+if logo:
+    logo_label = Label(root, image=logo, bg="black")
+    logo_label.pack(pady=20)
 
 card = Frame(root, bg="#e6e6e6", width=420, height=320)
 card.pack()
